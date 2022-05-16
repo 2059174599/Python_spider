@@ -1,0 +1,994 @@
+2022-05-13 10:11:50 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-13 10:11:50 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-13 10:11:50 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-13 10:11:50 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_13.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-13 10:11:50 [scrapy.extensions.telnet] INFO: Telnet Password: 0514221e1081409a
+2022-05-13 10:11:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-13 10:11:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-13 10:11:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-13 10:11:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-13 10:11:51 [scrapy.core.engine] INFO: Spider opened
+2022-05-13 10:11:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-13 10:11:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-13 10:11:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/new/> (referer: None)
+2022-05-13 10:11:51 [xixisoft] INFO: url
+2022-05-13 10:11:51 [xixisoft] INFO: url
+2022-05-13 10:11:51 [xixisoft] INFO: url
+2022-05-13 10:11:51 [xixisoft] INFO: url
+2022-05-13 10:11:51 [xixisoft] INFO: url
+2022-05-13 10:11:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1219533.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:11:54 [xixisoft] INFO: 数据：幼儿社家长端
+2022-05-13 10:11:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495620.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:11:57 [xixisoft] INFO: 数据：工程计算器套裁优化
+2022-05-13 10:11:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495622.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:12:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495618.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:12:02 [xixisoft] INFO: 数据：蓝猫数字app
+2022-05-13 10:12:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495619.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:12:05 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.cr173.com/soft/1495619.html> (referer: https://www.cr173.com/new/)
+Traceback (most recent call last):
+  File "d:\program\anaconda\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "E:\gitlab\crawler-web\eversec\eversec\spiders\xixisoft.py", line 70, in shop_html
+    platfrom = re.search('应用平台:</span><b>(.*?)</b>', response.text, re.S).group(1).strip()
+AttributeError: 'NoneType' object has no attribute 'group'
+2022-05-13 10:12:05 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-13 10:12:05 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 2098,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/response_bytes': 115205,
+ 'downloader/response_count': 6,
+ 'downloader/response_status_count/200': 6,
+ 'elapsed_time_seconds': 13.848958,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 13, 2, 12, 5, 206269),
+ 'httpcompression/response_bytes': 652136,
+ 'httpcompression/response_count': 6,
+ 'log_count/DEBUG': 6,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 18,
+ 'request_depth_max': 1,
+ 'response_received_count': 6,
+ 'scheduler/dequeued/redis': 6,
+ 'scheduler/enqueued/redis': 6,
+ 'spider_exceptions/AttributeError': 1,
+ 'start_time': datetime.datetime(2022, 5, 13, 2, 11, 51, 357311)}
+2022-05-13 10:12:05 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-13 10:18:31 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-13 10:18:31 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-13 10:18:31 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-13 10:18:31 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_13.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-13 10:18:31 [scrapy.extensions.telnet] INFO: Telnet Password: 2e02b6af560244e9
+2022-05-13 10:18:31 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-13 10:18:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-13 10:18:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-13 10:18:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-13 10:18:31 [scrapy.core.engine] INFO: Spider opened
+2022-05-13 10:18:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-13 10:18:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-13 10:18:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/new/> (referer: None)
+2022-05-13 10:18:32 [xixisoft] INFO: url
+2022-05-13 10:18:32 [xixisoft] INFO: url
+2022-05-13 10:18:32 [xixisoft] INFO: url
+2022-05-13 10:18:32 [xixisoft] INFO: url
+2022-05-13 10:18:32 [xixisoft] INFO: url
+2022-05-13 10:18:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1219533.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:18:35 [xixisoft] INFO: 数据：幼儿社家长端
+2022-05-13 10:18:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495620.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:18:37 [xixisoft] INFO: 数据：工程计算器套裁优化
+2022-05-13 10:18:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495622.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:18:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495618.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:18:42 [xixisoft] INFO: 数据：蓝猫数字app
+2022-05-13 10:18:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cr173.com/soft/1495619.html> (referer: https://www.cr173.com/new/)
+2022-05-13 10:18:44 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.cr173.com/soft/1495619.html> (referer: https://www.cr173.com/new/)
+Traceback (most recent call last):
+  File "d:\program\anaconda\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "E:\gitlab\crawler-web\eversec\eversec\spiders\xixisoft.py", line 67, in shop_html
+    platfrom = re.search('应用平台:</span><b>(.*?)</b>', response.text, re.S).group(1).strip()
+AttributeError: 'NoneType' object has no attribute 'group'
+2022-05-13 10:18:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-13 10:18:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 2098,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/response_bytes': 115472,
+ 'downloader/response_count': 6,
+ 'downloader/response_status_count/200': 6,
+ 'elapsed_time_seconds': 12.632214,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 13, 2, 18, 44, 601150),
+ 'httpcompression/response_bytes': 652136,
+ 'httpcompression/response_count': 6,
+ 'log_count/DEBUG': 6,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 18,
+ 'request_depth_max': 1,
+ 'response_received_count': 6,
+ 'scheduler/dequeued/redis': 6,
+ 'scheduler/enqueued/redis': 6,
+ 'spider_exceptions/AttributeError': 1,
+ 'start_time': datetime.datetime(2022, 5, 13, 2, 18, 31, 968936)}
+2022-05-13 10:18:44 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-13 10:36:38 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-13 10:36:38 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-13 10:36:38 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-13 10:36:38 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_13.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-13 10:36:38 [scrapy.extensions.telnet] INFO: Telnet Password: f0e76cedd6bf5ae0
+2022-05-13 10:36:38 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-13 10:36:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-13 10:36:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-13 10:36:39 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-13 10:36:39 [scrapy.core.engine] INFO: Spider opened
+2022-05-13 10:36:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-13 10:36:39 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-13 10:36:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4> (referer: None)
+2022-05-13 10:36:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102118&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:42 [360] INFO: page:21
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102118&order=newest+> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:42 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102118&order=newest+
+2022-05-13 10:36:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=19&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:45 [360] INFO: page:21
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:45 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=19&order=newest+
+2022-05-13 10:36:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=52&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:47 [360] INFO: page:21
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:47 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=52&order=newest+
+2022-05-13 10:36:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=51&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:49 [360] INFO: page:21
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:49 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=51&order=newest+
+2022-05-13 10:36:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=20&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:52 [360] INFO: page:21
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:52 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=20&order=newest+
+2022-05-13 10:36:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=53&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:54 [360] INFO: page:21
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:54 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:55 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=53&order=newest+
+2022-05-13 10:36:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=100451&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:57 [360] INFO: page:21
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:57 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=100451&order=newest+
+2022-05-13 10:36:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102250&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:36:59 [360] INFO: page:21
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:36:59 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102250&order=newest+
+2022-05-13 10:37:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=54&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:02 [360] INFO: page:21
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:02 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=54&order=newest+
+2022-05-13 10:37:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=101587&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:05 [360] INFO: page:21
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:05 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=101587&order=newest+
+2022-05-13 10:37:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102246&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:07 [360] INFO: page:21
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:07 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102246&order=newest+
+2022-05-13 10:37:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102247&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:10 [360] INFO: page:21
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:10 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102247&order=newest+
+2022-05-13 10:37:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102248&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:12 [360] INFO: page:21
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:12 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102248&order=newest+
+2022-05-13 10:37:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102249&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:14 [360] INFO: page:21
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:14 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102249&order=newest+
+2022-05-13 10:37:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102229&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:17 [360] INFO: page:21
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:17 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102229&order=newest+
+2022-05-13 10:37:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102244&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:19 [360] INFO: page:21
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:19 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102244&order=newest+
+2022-05-13 10:37:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102243&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:22 [360] INFO: page:21
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:22 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102243&order=newest+
+2022-05-13 10:37:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102245&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:24 [360] INFO: page:21
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:24 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102245&order=newest+
+2022-05-13 10:37:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102238&order=newest+> (referer: http://m.app.so.com/category/request?page=1&requestType=ajax&cid=4)
+2022-05-13 10:37:26 [360] INFO: page:21
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=5&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=6&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=7&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=8&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=9&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=10&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=11&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=12&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=13&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=14&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=15&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=16&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=17&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=18&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=19&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=20&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:26 [360] INFO: 列表页url：http://m.app.so.com/category/cat_request?page=21&requestType=ajax&cid=4&csid=102238&order=newest+
+2022-05-13 10:37:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=19&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=19&order=newest+)
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596070
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639836
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3994323
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4009206
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3687136
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3928817
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=2499273
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3931605
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=1570757
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=1569727
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3269310
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639762
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639759
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639755
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639754
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3873316
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3976090
+2022-05-13 10:37:29 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3575801
+2022-05-13 10:37:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=51&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=51&order=newest+)
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4065513
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4584473
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4589891
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4036090
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4023940
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4033947
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=1873798
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4023633
+2022-05-13 10:37:31 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4019523
+2022-05-13 10:37:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=20&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=20&order=newest+)
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4591837
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4564606
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595616
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595955
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4589648
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596906
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4561884
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563122
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4586818
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563120
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=2996259
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638842
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638841
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638837
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638645
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638644
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638589
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638585
+2022-05-13 10:37:33 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4592134
+2022-05-13 10:37:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=52&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639211
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4029125
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4476627
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4566646
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638958
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3305445
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638647
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638643
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638590
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3102344
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4007708
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=2148742
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=436
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596514
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596183
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4148935
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596066
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596019
+2022-05-13 10:37:34 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=2408095
+2022-05-13 10:37:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=53&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=53&order=newest+)
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639640
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639638
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639637
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639635
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639593
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639535
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639531
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639527
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595871
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4589128
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3844003
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=1794585
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4480606
+2022-05-13 10:37:37 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3934158
+2022-05-13 10:37:39 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 25 pages/min), scraped 0 items (at 0 items/min)
+2022-05-13 10:37:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=19&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=19&order=newest+)
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639645
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3999348
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639642
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639643
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639636
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3014060
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3892415
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639537
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639532
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3485062
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639511
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3876813
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4022893
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639290
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639286
+2022-05-13 10:37:40 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639285
+2022-05-13 10:37:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=54&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=54&order=newest+)
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=750695
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562007
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562062
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562063
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562059
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4572699
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562060
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562061
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3952660
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=91928
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4593617
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4574519
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3447376
+2022-05-13 10:37:42 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595556
+2022-05-13 10:37:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=20&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=20&order=newest+)
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638324
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638319
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595584
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638235
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4555002
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638043
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638037
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638035
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=92816
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4637914
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4637886
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4637881
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4624197
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4624169
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596915
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596750
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596742
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596517
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596379
+2022-05-13 10:37:45 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596346
+2022-05-13 10:37:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=51&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=51&order=newest+)
+2022-05-13 10:37:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=52&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595989
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4580526
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595828
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4042559
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595752
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595670
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595668
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3545519
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4559311
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4572075
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4452572
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4580525
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4592313
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=124193
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3297365
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3949664
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4032283
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=2291248
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4029627
+2022-05-13 10:37:50 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3199588
+2022-05-13 10:37:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=53&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=53&order=newest+)
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639287
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639283
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4585522
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639214
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639213
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639212
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4553801
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595832
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4566647
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596916
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595748
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4592307
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4624225
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4043431
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638326
+2022-05-13 10:37:52 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4581422
+2022-05-13 10:37:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=54&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=54&order=newest+)
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3929151
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638662
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638661
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638660
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638659
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3307461
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3305801
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3306377
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3546206
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3546210
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3546221
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3778708
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3778805
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3958341
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3546226
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3778711
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3778712
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3152988
+2022-05-13 10:37:55 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3973061
+2022-05-13 10:37:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=19&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=19&order=newest+)
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639284
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639282
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639280
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639254
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3150430
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=909100
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4031488
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639216
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639215
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639208
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3968681
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4314623
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=890818
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3929210
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596073
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639091
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596910
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3656546
+2022-05-13 10:37:57 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638638
+2022-05-13 10:38:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=20&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=20&order=newest+)
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596342
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596339
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596187
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596185
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596184
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596061
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596057
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596017
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596014
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595992
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595993
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595991
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595987
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595978
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595956
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595872
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595829
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595827
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595825
+2022-05-13 10:38:00 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4595824
+2022-05-13 10:38:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=51&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=51&order=newest+)
+2022-05-13 10:38:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=52&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:38:06 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3306994
+2022-05-13 10:38:06 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3182180
+2022-05-13 10:38:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/category/cat_request?page=4&requestType=ajax&cid=4&csid=53&order=newest+> (referer: http://m.app.so.com/category/cat_request?page=1&requestType=ajax&cid=4&csid=53&order=newest+)
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638253
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638961
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638956
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638838
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638836
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638835
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3906261
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638648
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638588
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638406
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3988776
+2022-05-13 10:38:09 [360] INFO: 详情页url：http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4172417
+2022-05-13 10:38:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3931605> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=19&order=newest+)
+2022-05-13 10:38:12 [360] INFO: 数据：饥饿鲨：世界
+2022-05-13 10:38:12 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:12 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%8C%97%E4%BA%AC%E6%8E%8C%E8%B6%A3%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:12 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '饥饿鲨：世界', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220428/0fefd08e8ebfaff4766b4ce314e2e575/com.fgol.hsw.c360_111.apk?en=curpage%3D%26exp%3D1653014249%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409449%26tok%3Dc318cfc61adf139e27804eb478fb055f%26v%3D%26f%3Dz.apk', 'version': '4.7.0', 'introduce': '应用详情：育碧饥饿鲨8周年，再一次改变世界！万众期待喷气背包燃情登场，更有中国南海船新地图霸气来袭，更新！我们是认真的！活动！我们是给力的！\r\n\r\n饥饿鲨进化续作强势来袭！\r\n全世界深受欢迎的手机游戏新作来了！\r\n由育碧FGOL工作室倾情打造，真3D立体画面，家用游戏机品质的手游大作全面启航！\r\n全新的几十种鲨鱼，将在前所未有的开放式世界进行生存挑战！\r\n现在就出发，在海洋世界的食物链中再次超越你的极限吧！', 'developer': '北京掌趣科技股份有限公司', 'category': '游戏', 'updatetime': '2022-04-28', 'icon_url': 'https://p0.qhimg.com/t0113e4f22d622278d0.png', 'sceenshot_url': ['https://p0.qhimg.com/t01fb9459cb17e83b17.jpg', 'https://p0.qhimg.com/t0109cb0d0f533bdb01.jpg', 'https://p0.qhimg.com/t01d8f91e72de090afe.jpg', 'https://p0.qhimg.com/t01a95261c61c43a850.jpg', 'https://p0.qhimg.com/t01d008ac862657e33c.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3931605', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:12 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3931605>
+defaultdict(<class 'str'>, {'name': '饥饿鲨：世界', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220428/0fefd08e8ebfaff4766b4ce314e2e575/com.fgol.hsw.c360_111.apk?en=curpage%3D%26exp%3D1653014249%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409449%26tok%3Dc318cfc61adf139e27804eb478fb055f%26v%3D%26f%3Dz.apk', 'version': '4.7.0', 'introduce': '应用详情：育碧饥饿鲨8周年，再一次改变世界！万众期待喷气背包燃情登场，更有中国南海船新地图霸气来袭，更新！我们是认真的！活动！我们是给力的！\r\n\r\n饥饿鲨进化续作强势来袭！\r\n全世界深受欢迎的手机游戏新作来了！\r\n由育碧FGOL工作室倾情打造，真3D立体画面，家用游戏机品质的手游大作全面启航！\r\n全新的几十种鲨鱼，将在前所未有的开放式世界进行生存挑战！\r\n现在就出发，在海洋世界的食物链中再次超越你的极限吧！', 'developer': '北京掌趣科技股份有限公司', 'category': '游戏', 'updatetime': '2022-04-28', 'icon_url': 'https://p0.qhimg.com/t0113e4f22d622278d0.png', 'sceenshot_url': ['https://p0.qhimg.com/t01fb9459cb17e83b17.jpg', 'https://p0.qhimg.com/t0109cb0d0f533bdb01.jpg', 'https://p0.qhimg.com/t01d8f91e72de090afe.jpg', 'https://p0.qhimg.com/t01a95261c61c43a850.jpg', 'https://p0.qhimg.com/t01d008ac862657e33c.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3931605', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639759> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=19&order=newest+)
+2022-05-13 10:38:14 [360] INFO: 数据：鼻涕虫
+2022-05-13 10:38:14 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:15 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E7%87%83%E6%B8%B8%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:15 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '鼻涕虫', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220426/58dcdff45e087ab14df79a5958b99b3e/com.mobbanana.sll.btc.qihoo_10.apk?en=curpage%3D%26exp%3D1653014249%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409449%26tok%3D3af78c8c1576bbc136e82de4e675061a%26v%3D%26f%3Dz.apk', 'version': '1.0.0', 'introduce': '应用详情：鼻涕虫是一款非常有趣的休闲闯关游戏，玩家在游戏中将要控制自己的鼻涕虫在关卡中进行冒险，鼻涕虫想要吃到各种食物，但它总是够不到，这个时候就需要你帮助它吃到所有的食物才算过关，超级好玩滑稽的鼻涕虫!', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-04-26', 'icon_url': 'https://p0.qhimg.com/t01349d10958026713c.png', 'sceenshot_url': ['https://p0.qhimg.com/t01843cb1ad4a9767c4.jpg', 'https://p0.qhimg.com/t01740d53729660a723.jpg', 'https://p0.qhimg.com/t01046e6a8d77e4d66f.jpg', 'https://p0.qhimg.com/t012035e81240409cf3.jpg', 'https://p0.qhimg.com/t01ee44edf624bfe298.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639759', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:15 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639759>
+defaultdict(<class 'str'>, {'name': '鼻涕虫', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220426/58dcdff45e087ab14df79a5958b99b3e/com.mobbanana.sll.btc.qihoo_10.apk?en=curpage%3D%26exp%3D1653014249%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409449%26tok%3D3af78c8c1576bbc136e82de4e675061a%26v%3D%26f%3Dz.apk', 'version': '1.0.0', 'introduce': '应用详情：鼻涕虫是一款非常有趣的休闲闯关游戏，玩家在游戏中将要控制自己的鼻涕虫在关卡中进行冒险，鼻涕虫想要吃到各种食物，但它总是够不到，这个时候就需要你帮助它吃到所有的食物才算过关，超级好玩滑稽的鼻涕虫!', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-04-26', 'icon_url': 'https://p0.qhimg.com/t01349d10958026713c.png', 'sceenshot_url': ['https://p0.qhimg.com/t01843cb1ad4a9767c4.jpg', 'https://p0.qhimg.com/t01740d53729660a723.jpg', 'https://p0.qhimg.com/t01046e6a8d77e4d66f.jpg', 'https://p0.qhimg.com/t012035e81240409cf3.jpg', 'https://p0.qhimg.com/t01ee44edf624bfe298.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639759', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563122> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=20&order=newest+)
+2022-05-13 10:38:17 [360] INFO: 数据：遨游中国
+2022-05-13 10:38:17 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:18 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E7%87%83%E6%B8%B8%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:18 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '遨游中国', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220315/a647f8db009337c7e6fa02c89b0be396/com.mobbanana.ayzg_32.apk?en=curpage%3D%26exp%3D1653014253%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409453%26tok%3D72b833479d405dbf5777fcdf2e96db8b%26v%3D%26f%3Dz.apk', 'version': '1.0.3', 'introduce': '应用详情：《遨游中国》是一款卡车模拟驾驶类游戏。游戏中，你将扮演一名卡车司机，驾驶大卡车完成任务挑战，体验真实的卡车模拟。你可以选择三种不同模式来操控你的卡车——左右按钮、方向盘或是重力平衡感应。你将穿梭在不同的地方，同时可以购买、升级你的卡车，探索属于卡车的世界！游戏拥有许多自定义欧洲车，享受令人兴奋的驾驶体验，同时，在许多国家旅行欧洲，参观令人难以置信的地方，如柏林，布拉格，马德里，罗马，巴黎！', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-03-15', 'icon_url': 'https://p0.qhimg.com/t0121f17b26db054869.png', 'sceenshot_url': ['https://p0.qhimg.com/t011f68f726e4014a89.jpg', 'https://p0.qhimg.com/t01037802edf3ed2e45.jpg', 'https://p0.qhimg.com/t01206407c4cbb9211d.jpg', 'https://p0.qhimg.com/t01cc66b0bea88acf23.jpg', 'https://p0.qhimg.com/t0189a1f9541f428205.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563122', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:18 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563122>
+defaultdict(<class 'str'>, {'name': '遨游中国', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220315/a647f8db009337c7e6fa02c89b0be396/com.mobbanana.ayzg_32.apk?en=curpage%3D%26exp%3D1653014253%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409453%26tok%3D72b833479d405dbf5777fcdf2e96db8b%26v%3D%26f%3Dz.apk', 'version': '1.0.3', 'introduce': '应用详情：《遨游中国》是一款卡车模拟驾驶类游戏。游戏中，你将扮演一名卡车司机，驾驶大卡车完成任务挑战，体验真实的卡车模拟。你可以选择三种不同模式来操控你的卡车——左右按钮、方向盘或是重力平衡感应。你将穿梭在不同的地方，同时可以购买、升级你的卡车，探索属于卡车的世界！游戏拥有许多自定义欧洲车，享受令人兴奋的驾驶体验，同时，在许多国家旅行欧洲，参观令人难以置信的地方，如柏林，布拉格，马德里，罗马，巴黎！', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-03-15', 'icon_url': 'https://p0.qhimg.com/t0121f17b26db054869.png', 'sceenshot_url': ['https://p0.qhimg.com/t011f68f726e4014a89.jpg', 'https://p0.qhimg.com/t01037802edf3ed2e45.jpg', 'https://p0.qhimg.com/t01206407c4cbb9211d.jpg', 'https://p0.qhimg.com/t01cc66b0bea88acf23.jpg', 'https://p0.qhimg.com/t0189a1f9541f428205.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563122', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596514> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:38:20 [360] INFO: 数据：公路枪战
+2022-05-13 10:38:20 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:20 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E4%B8%87%E7%BB%B4%E5%9C%A8%E7%BA%BF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:20 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '公路枪战', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211130/62b82191715171b704d75bea1ae665e7/com.mobbanana.bnn.glqz_10.apk?en=curpage%3D%26exp%3D1653014255%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409455%26tok%3D3be7c0dcdebda91cd94e5051d9e9bab2%26v%3D%26f%3Dz.apk', 'version': '1.0.0', 'introduce': '应用详情：成为一个全新故事的成员，享受新的3D游戏玩法。 一堆不寻常的游戏机制，可以从新的角度看亚军游戏！\r\n\r\n游戏特色：\r\n1、游戏中的卡通世界还是很精致的，各种不同的赛道上会有各种障碍和危险向你靠近，你需要灵活闪避。\r\n\r\n2、各种武器装备可以自由购买，在驾驶机车的挑战的过程中，会有很多敌人会对你造成致命的威胁。\r\n\r\n3、将所有的敌人击杀，只有自己能够安全的抵达终点，才能获得关卡中的特殊奖励哦。\r\n\r\n地狱摩托亮点\r\n1、虽然游戏是像素风格的，但是整个游戏的挑战过程还是很不错的，至少玩法上面也比较风趣。\r\n\r\n2、完成每天的日常，累计更多的材料和资源，不断提升骑士的属性和机车的能力，可以面对更多危险。\r\n\r\n3、驾驶过程很考验技术的，公路上会出现什么情况没有人知道，只有靠技术才能避免撞击。\r\n\r\n地狱摩托特色\r\n1、享受卡通3D摩托驾驶的乐趣，融入了惊人的射击元素，你能尽情在道路上行驶，消灭恶魔的爪牙;\r\n\r\n2、独特的慢镜头瞄准机制，能够让你有时间准确的打击敌人，而且不会影响你的驾驶，十分的人性化;\r\n\r\n3、目前提供了三个不同的角色，他们的能力各不相同，但是能让你感受到成为英雄的快感;\r\n\r\n4、在一个风景如画的世界中冒险，精美的图形设计以及出色的音效系统，让人感觉到极度沉浸式的体验。\r\n\r\n游戏描述：\r\n这是一款与众不同的竞速类游戏。在游戏中您可以尽情的疾驰您的摩托，\r\n不用受到约束。您还可以可别人比赛，您可以使用\r\n道具攻击对方，给对手造成干扰，您就可以拿到第一名。', 'developer': '广州万维在线科技有限公司', 'category': '游戏', 'updatetime': '2021-11-30', 'icon_url': 'https://p0.qhimg.com/t01fa5bcbb04a296758.png', 'sceenshot_url': ['https://p0.qhimg.com/t01542d76e7c6003262.jpg', 'https://p0.qhimg.com/t0108dc29611d695378.jpg', 'https://p0.qhimg.com/t01b2b4e5385c306966.jpg', 'https://p0.qhimg.com/t01a207d57d99468e91.jpg', 'https://p0.qhimg.com/t0153612c247f5ae6f2.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596514', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596514>
+defaultdict(<class 'str'>, {'name': '公路枪战', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211130/62b82191715171b704d75bea1ae665e7/com.mobbanana.bnn.glqz_10.apk?en=curpage%3D%26exp%3D1653014255%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409455%26tok%3D3be7c0dcdebda91cd94e5051d9e9bab2%26v%3D%26f%3Dz.apk', 'version': '1.0.0', 'introduce': '应用详情：成为一个全新故事的成员，享受新的3D游戏玩法。 一堆不寻常的游戏机制，可以从新的角度看亚军游戏！\r\n\r\n游戏特色：\r\n1、游戏中的卡通世界还是很精致的，各种不同的赛道上会有各种障碍和危险向你靠近，你需要灵活闪避。\r\n\r\n2、各种武器装备可以自由购买，在驾驶机车的挑战的过程中，会有很多敌人会对你造成致命的威胁。\r\n\r\n3、将所有的敌人击杀，只有自己能够安全的抵达终点，才能获得关卡中的特殊奖励哦。\r\n\r\n地狱摩托亮点\r\n1、虽然游戏是像素风格的，但是整个游戏的挑战过程还是很不错的，至少玩法上面也比较风趣。\r\n\r\n2、完成每天的日常，累计更多的材料和资源，不断提升骑士的属性和机车的能力，可以面对更多危险。\r\n\r\n3、驾驶过程很考验技术的，公路上会出现什么情况没有人知道，只有靠技术才能避免撞击。\r\n\r\n地狱摩托特色\r\n1、享受卡通3D摩托驾驶的乐趣，融入了惊人的射击元素，你能尽情在道路上行驶，消灭恶魔的爪牙;\r\n\r\n2、独特的慢镜头瞄准机制，能够让你有时间准确的打击敌人，而且不会影响你的驾驶，十分的人性化;\r\n\r\n3、目前提供了三个不同的角色，他们的能力各不相同，但是能让你感受到成为英雄的快感;\r\n\r\n4、在一个风景如画的世界中冒险，精美的图形设计以及出色的音效系统，让人感觉到极度沉浸式的体验。\r\n\r\n游戏描述：\r\n这是一款与众不同的竞速类游戏。在游戏中您可以尽情的疾驰您的摩托，\r\n不用受到约束。您还可以可别人比赛，您可以使用\r\n道具攻击对方，给对手造成干扰，您就可以拿到第一名。', 'developer': '广州万维在线科技有限公司', 'category': '游戏', 'updatetime': '2021-11-30', 'icon_url': 'https://p0.qhimg.com/t01fa5bcbb04a296758.png', 'sceenshot_url': ['https://p0.qhimg.com/t01542d76e7c6003262.jpg', 'https://p0.qhimg.com/t0108dc29611d695378.jpg', 'https://p0.qhimg.com/t01b2b4e5385c306966.jpg', 'https://p0.qhimg.com/t01a207d57d99468e91.jpg', 'https://p0.qhimg.com/t0153612c247f5ae6f2.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4596514', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4148935> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:38:23 [360] INFO: 数据：双生视界
+2022-05-13 10:38:23 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:23 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E4%B8%8A%E6%B5%B7%E5%B9%BB%E7%94%B5%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:23 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '双生视界', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211119/ba9cffe2f6e511e90ac3cb33ed59b5f9/com.bilibili.gcg2.qihoo_10136.apk?en=curpage%3D%26exp%3D1653014255%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409455%26tok%3D01dc08d3b93ebf3f2fb3f88fb8ec071b%26v%3D%26f%3Dz.apk', 'version': '1.1.36', 'introduce': '应用详情：《双生视界》是一款面向二次元用户的射击养成游戏，集合了TPS战斗和Live2D互动、经营等元素。游戏讲述由“源力”引发的灾难“大爆发”之后的故事。在游戏中，玩家扮演的指挥官将携手08小队的多位少女战士成员一起战斗。', 'developer': '上海幻电信息科技有限公司', 'category': '游戏', 'updatetime': '2021-11-19', 'icon_url': 'https://p0.qhimg.com/t015d94a6c2ab10f3bc.png', 'sceenshot_url': ['https://p0.qhimg.com/t010e5f28bacebe2045.jpg', 'https://p0.qhimg.com/t0110c12d4216c67e95.jpg', 'https://p0.qhimg.com/t015b5b5e486c11e208.jpg', 'https://p0.qhimg.com/t01d9c6a6cda596ba83.jpg', 'https://p0.qhimg.com/t011dbebc534c2aad08.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4148935', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4148935>
+defaultdict(<class 'str'>, {'name': '双生视界', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211119/ba9cffe2f6e511e90ac3cb33ed59b5f9/com.bilibili.gcg2.qihoo_10136.apk?en=curpage%3D%26exp%3D1653014255%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409455%26tok%3D01dc08d3b93ebf3f2fb3f88fb8ec071b%26v%3D%26f%3Dz.apk', 'version': '1.1.36', 'introduce': '应用详情：《双生视界》是一款面向二次元用户的射击养成游戏，集合了TPS战斗和Live2D互动、经营等元素。游戏讲述由“源力”引发的灾难“大爆发”之后的故事。在游戏中，玩家扮演的指挥官将携手08小队的多位少女战士成员一起战斗。', 'developer': '上海幻电信息科技有限公司', 'category': '游戏', 'updatetime': '2021-11-19', 'icon_url': 'https://p0.qhimg.com/t015d94a6c2ab10f3bc.png', 'sceenshot_url': ['https://p0.qhimg.com/t010e5f28bacebe2045.jpg', 'https://p0.qhimg.com/t0110c12d4216c67e95.jpg', 'https://p0.qhimg.com/t015b5b5e486c11e208.jpg', 'https://p0.qhimg.com/t01d9c6a6cda596ba83.jpg', 'https://p0.qhimg.com/t011dbebc534c2aad08.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4148935', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639511> (referer: http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=19&order=newest+)
+2022-05-13 10:38:25 [360] INFO: 数据：拆箱
+2022-05-13 10:38:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:26 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E7%87%83%E6%B8%B8%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:26 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '拆箱', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220413/826f4ba839daf7d4a8a4032abe266e87/com.mobbanana.sll.cx.qihoo_63.apk?en=curpage%3D%26exp%3D1653014260%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409460%26tok%3D34e7c2415363af76c6be8487e932613d%26v%3D%26f%3Dz.apk', 'version': '1.0.4', 'introduce': '应用详情：在清新自然的沙盒画面中体验整理房间的乐趣。每次开箱都会看到新的物品，面对房间内有限的空间，你该如何放置才能让房间看起来更加整洁？考验你整理能力的时刻到了，快来下载体验吧！\r\n\r\n游戏亮点\r\n1、客厅，卧室，浴室，都需要玩家清理，让房间看起来更加整洁。\r\n\r\n2、将项目拖动到正确的位置并获得更多积分以查看显示级别上剩余的项目数量。\r\n\r\n3、没有任务目标，没有敌人和阻碍，只有任你摆布的房间和杂乱的物品。', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-04-13', 'icon_url': 'https://p0.qhimg.com/t017d0437f3c668102f.png', 'sceenshot_url': ['https://p0.qhimg.com/t01bbe26903a7ece069.jpg', 'https://p0.qhimg.com/t01ffbf19331d7008f8.jpg', 'https://p0.qhimg.com/t01220142986fdbe336.jpg', 'https://p0.qhimg.com/t01dc10c2d1926e26d6.jpg', 'https://p0.qhimg.com/t01843c5b204b12cda5.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639511', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:26 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639511>
+defaultdict(<class 'str'>, {'name': '拆箱', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220413/826f4ba839daf7d4a8a4032abe266e87/com.mobbanana.sll.cx.qihoo_63.apk?en=curpage%3D%26exp%3D1653014260%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409460%26tok%3D34e7c2415363af76c6be8487e932613d%26v%3D%26f%3Dz.apk', 'version': '1.0.4', 'introduce': '应用详情：在清新自然的沙盒画面中体验整理房间的乐趣。每次开箱都会看到新的物品，面对房间内有限的空间，你该如何放置才能让房间看起来更加整洁？考验你整理能力的时刻到了，快来下载体验吧！\r\n\r\n游戏亮点\r\n1、客厅，卧室，浴室，都需要玩家清理，让房间看起来更加整洁。\r\n\r\n2、将项目拖动到正确的位置并获得更多积分以查看显示级别上剩余的项目数量。\r\n\r\n3、没有任务目标，没有敌人和阻碍，只有任你摆布的房间和杂乱的物品。', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-04-13', 'icon_url': 'https://p0.qhimg.com/t017d0437f3c668102f.png', 'sceenshot_url': ['https://p0.qhimg.com/t01bbe26903a7ece069.jpg', 'https://p0.qhimg.com/t01ffbf19331d7008f8.jpg', 'https://p0.qhimg.com/t01220142986fdbe336.jpg', 'https://p0.qhimg.com/t01dc10c2d1926e26d6.jpg', 'https://p0.qhimg.com/t01843c5b204b12cda5.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4639511', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562059> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=54&order=newest+)
+2022-05-13 10:38:28 [360] INFO: 数据：潇湘湖南麻将
+2022-05-13 10:38:28 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:28 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E4%B8%AD%E4%BC%A0%E4%BA%92%E5%8A%A8%EF%BC%88%E6%B9%96%E5%8C%97%EF%BC%89%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:28 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '潇湘湖南麻将', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220421/31f2f3a2261990dd5c4ab4a40b14982e/com.zoxun.hnmj.qihoo_5.apk?en=curpage%3D%26exp%3D1653014262%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409462%26tok%3Db92d2994dda0f0f4addf1354f8888da8%26v%3D%26f%3Dz.apk', 'version': '1.0.5', 'introduce': '应用详情：潇湘湖南麻将是湖南人都爱玩的一款麻将游戏，游戏画面高清精致，刺激欢乐high不停，丰富的玩法多样的策略，休闲愉悦的同时以牌会友，畅赢大奖！地道爽快的麻将体验就在这里等你来！', 'developer': '中传互动（湖北）信息技术有限公司', 'category': '游戏', 'updatetime': '2022-04-21', 'icon_url': 'https://p0.qhimg.com/t016bb03aa2f734f45f.png', 'sceenshot_url': ['https://p0.qhimg.com/t019026791cf5e9df31.jpg', 'https://p0.qhimg.com/t0163c5f4102130f5a0.jpg', 'https://p0.qhimg.com/t0114e0a42307dab692.jpg', 'https://p0.qhimg.com/t01dba3cb8d77eae6d0.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562059', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562059>
+defaultdict(<class 'str'>, {'name': '潇湘湖南麻将', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220421/31f2f3a2261990dd5c4ab4a40b14982e/com.zoxun.hnmj.qihoo_5.apk?en=curpage%3D%26exp%3D1653014262%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409462%26tok%3Db92d2994dda0f0f4addf1354f8888da8%26v%3D%26f%3Dz.apk', 'version': '1.0.5', 'introduce': '应用详情：潇湘湖南麻将是湖南人都爱玩的一款麻将游戏，游戏画面高清精致，刺激欢乐high不停，丰富的玩法多样的策略，休闲愉悦的同时以牌会友，畅赢大奖！地道爽快的麻将体验就在这里等你来！', 'developer': '中传互动（湖北）信息技术有限公司', 'category': '游戏', 'updatetime': '2022-04-21', 'icon_url': 'https://p0.qhimg.com/t016bb03aa2f734f45f.png', 'sceenshot_url': ['https://p0.qhimg.com/t019026791cf5e9df31.jpg', 'https://p0.qhimg.com/t0163c5f4102130f5a0.jpg', 'https://p0.qhimg.com/t0114e0a42307dab692.jpg', 'https://p0.qhimg.com/t01dba3cb8d77eae6d0.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562059', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638037> (referer: http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=20&order=newest+)
+2022-05-13 10:38:31 [360] INFO: 数据：沙丘
+2022-05-13 10:38:31 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:31 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E7%87%83%E6%B8%B8%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:31 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '沙丘', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220106/0d697f68d6fc60d6a5ccd802cea56a14/com.mobbanana.bnn.sq.sll_10.apk?en=curpage%3D%26exp%3D1653014265%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409465%26tok%3D9aa9b2385ad94cd51c1e732035872d76%26v%3D%26f%3Dz.apk', 'version': '1.0.0', 'introduce': '应用详情：游戏中玩家将会来扮演一个被困在广阔沙漠中的孤独幸存者。在这里玩家们能尝试的就是在漂浮在空中的木筏上生存，在保持生存的同时还得来面对恐怖的沙漠怪物的袭击。 \r\n\r\n游戏特色： \r\n1、收集和生产资源来维持你的生存状态； \r\n2、制作各种各样的武器和盔甲保护自己； \r\n3、尝试去探索具有不同地点的巨大世界。', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-01-06', 'icon_url': 'https://p0.qhimg.com/t0131c8805fc72da229.png', 'sceenshot_url': ['https://p0.qhimg.com/t014849949e214f2dd2.jpg', 'https://p0.qhimg.com/t01fb9db3bd9f4af4a2.jpg', 'https://p0.qhimg.com/t0179f8a6ee39487591.jpg', 'https://p0.qhimg.com/t01be5a93885325ed1d.jpg', 'https://p0.qhimg.com/t01e1362cdbe13b6147.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638037', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638037>
+defaultdict(<class 'str'>, {'name': '沙丘', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220106/0d697f68d6fc60d6a5ccd802cea56a14/com.mobbanana.bnn.sq.sll_10.apk?en=curpage%3D%26exp%3D1653014265%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409465%26tok%3D9aa9b2385ad94cd51c1e732035872d76%26v%3D%26f%3Dz.apk', 'version': '1.0.0', 'introduce': '应用详情：游戏中玩家将会来扮演一个被困在广阔沙漠中的孤独幸存者。在这里玩家们能尝试的就是在漂浮在空中的木筏上生存，在保持生存的同时还得来面对恐怖的沙漠怪物的袭击。 \r\n\r\n游戏特色： \r\n1、收集和生产资源来维持你的生存状态； \r\n2、制作各种各样的武器和盔甲保护自己； \r\n3、尝试去探索具有不同地点的巨大世界。', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2022-01-06', 'icon_url': 'https://p0.qhimg.com/t0131c8805fc72da229.png', 'sceenshot_url': ['https://p0.qhimg.com/t014849949e214f2dd2.jpg', 'https://p0.qhimg.com/t01fb9db3bd9f4af4a2.jpg', 'https://p0.qhimg.com/t0179f8a6ee39487591.jpg', 'https://p0.qhimg.com/t01be5a93885325ed1d.jpg', 'https://p0.qhimg.com/t01e1362cdbe13b6147.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4638037', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562063> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=54&order=newest+)
+2022-05-13 10:38:32 [360] INFO: 数据：秦乐陕西麻将
+2022-05-13 10:38:32 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:33 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E4%B8%AD%E4%BC%A0%E4%BA%92%E5%8A%A8%EF%BC%88%E6%B9%96%E5%8C%97%EF%BC%89%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:33 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '秦乐陕西麻将', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220421/566f5260025909dfd017b09ce23ea35b/com.zoxun.sxmj.qihoo_5.apk?en=curpage%3D%26exp%3D1653014262%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409462%26tok%3D9d7740ed528f7111a6973c4624829784%26v%3D%26f%3Dz.apk', 'version': '1.0.5', 'introduce': '应用详情：秦乐陕西麻将是一款好玩的益智休闲类棋牌游戏，游戏玩法简单经典，实时语音互动，沟通乐趣无限。喜欢打麻将的陕西人必备的游戏，可以在这里与朋友们进行pk，赶紧下载试试吧！', 'developer': '中传互动（湖北）信息技术有限公司', 'category': '游戏', 'updatetime': '2022-04-21', 'icon_url': 'https://p0.qhimg.com/t01d12f6ab431e07d40.png', 'sceenshot_url': ['https://p0.qhimg.com/t010de0422563806410.jpg', 'https://p0.qhimg.com/t01f1215f034ee69af7.jpg', 'https://p0.qhimg.com/t01e4b796e2adc182f0.jpg', 'https://p0.qhimg.com/t01e33367858c3b2d08.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562063', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562063>
+defaultdict(<class 'str'>, {'name': '秦乐陕西麻将', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220421/566f5260025909dfd017b09ce23ea35b/com.zoxun.sxmj.qihoo_5.apk?en=curpage%3D%26exp%3D1653014262%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409462%26tok%3D9d7740ed528f7111a6973c4624829784%26v%3D%26f%3Dz.apk', 'version': '1.0.5', 'introduce': '应用详情：秦乐陕西麻将是一款好玩的益智休闲类棋牌游戏，游戏玩法简单经典，实时语音互动，沟通乐趣无限。喜欢打麻将的陕西人必备的游戏，可以在这里与朋友们进行pk，赶紧下载试试吧！', 'developer': '中传互动（湖北）信息技术有限公司', 'category': '游戏', 'updatetime': '2022-04-21', 'icon_url': 'https://p0.qhimg.com/t01d12f6ab431e07d40.png', 'sceenshot_url': ['https://p0.qhimg.com/t010de0422563806410.jpg', 'https://p0.qhimg.com/t01f1215f034ee69af7.jpg', 'https://p0.qhimg.com/t01e4b796e2adc182f0.jpg', 'https://p0.qhimg.com/t01e33367858c3b2d08.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4562063', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4559311> (referer: http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:38:34 [360] INFO: 数据：像素绝地吃鸡
+2022-05-13 10:38:34 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:34 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E7%87%83%E6%B8%B8%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:34 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '像素绝地吃鸡', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211014/c7a7208aa26b3a81902bc630aa71dd66/com.mobbanana.xsjdcj_12.apk?en=curpage%3D%26exp%3D1653014271%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409471%26tok%3D0ff8b95ee413cc7dc35ee4a3de412f7a%26v%3D%26f%3Dz.apk', 'version': '1.0.2', 'introduce': '应用详情：像素绝地吃鸡！如果您喜欢军事风格大逃杀的游戏，那么您一定会喜欢像素绝地吃鸡！\r\n\r\n在新的大型开放式世界中游戏时，在线与多名玩家在游戏中战斗！在战场中存活下来，提高您的射击技能，并免费制定新的PVP战术！\r\n从幸存飞机跳到死亡之岛上、找到装备、杀死敌人。手无寸铁的玩家会分散在岛屿的各个角落，必须找到并使用不同的武器和物品来消灭对手。找到您能发现的武器：突击步枪、像素枪、冲锋枪、散弹枪及其他武器。逐个消灭对手，主导战场，并成为最后的幸存者！抓起您的像素枪，开始射击吧！', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2021-10-14', 'icon_url': 'https://p0.qhimg.com/t01cbae54a05c3a7fe6.png', 'sceenshot_url': ['https://p0.qhimg.com/t01fd1697c612bf8a45.jpg', 'https://p0.qhimg.com/t01b1a9541728364f44.jpg', 'https://p0.qhimg.com/t01d239bda3579f4e27.jpg', 'https://p0.qhimg.com/t017114e030ec16e1da.jpg', 'https://p0.qhimg.com/t017e62a16e06c3c545.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4559311', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4559311>
+defaultdict(<class 'str'>, {'name': '像素绝地吃鸡', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211014/c7a7208aa26b3a81902bc630aa71dd66/com.mobbanana.xsjdcj_12.apk?en=curpage%3D%26exp%3D1653014271%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409471%26tok%3D0ff8b95ee413cc7dc35ee4a3de412f7a%26v%3D%26f%3Dz.apk', 'version': '1.0.2', 'introduce': '应用详情：像素绝地吃鸡！如果您喜欢军事风格大逃杀的游戏，那么您一定会喜欢像素绝地吃鸡！\r\n\r\n在新的大型开放式世界中游戏时，在线与多名玩家在游戏中战斗！在战场中存活下来，提高您的射击技能，并免费制定新的PVP战术！\r\n从幸存飞机跳到死亡之岛上、找到装备、杀死敌人。手无寸铁的玩家会分散在岛屿的各个角落，必须找到并使用不同的武器和物品来消灭对手。找到您能发现的武器：突击步枪、像素枪、冲锋枪、散弹枪及其他武器。逐个消灭对手，主导战场，并成为最后的幸存者！抓起您的像素枪，开始射击吧！', 'developer': '广州燃游科技有限公司', 'category': '游戏', 'updatetime': '2021-10-14', 'icon_url': 'https://p0.qhimg.com/t01cbae54a05c3a7fe6.png', 'sceenshot_url': ['https://p0.qhimg.com/t01fd1697c612bf8a45.jpg', 'https://p0.qhimg.com/t01b1a9541728364f44.jpg', 'https://p0.qhimg.com/t01d239bda3579f4e27.jpg', 'https://p0.qhimg.com/t017114e030ec16e1da.jpg', 'https://p0.qhimg.com/t017e62a16e06c3c545.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4559311', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3545519> (referer: http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=52&order=newest+)
+2022-05-13 10:38:36 [360] INFO: 数据：战舰猎手
+2022-05-13 10:38:36 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:36 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%89%BF%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:36 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '战舰猎手', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211019/8eb0ed8defe7d59ffd35fa1f9ebff4f5/com.kongzhong.c1.qh_55.apk?en=curpage%3D%26exp%3D1653014271%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409471%26tok%3D36524bd245599f622b839e3ea530e34e%26v%3D%26f%3Dz.apk', 'version': '1.19.10', 'introduce': '应用详情：     《战舰猎手》是一款二战题材3D海战射击手游，7V7的快节奏对战；加入F系10级金币巡洋舰-弗朗索瓦一世号礼包！与全新排位赛地图“马耳他”，属性更合理对战舰提升更大，各舰种相互配合，协同作战；拥有专业的转职晋升体系，个性化培养自己的舰员。更有触发式水兵技能，是关键时刻改变战局的力量；首推潜艇模式，真实水下视角，从海底出击还原史诗战役，基于经典海战战术演变而来， 300艘战列舰，巡洋舰，驱逐舰，航母，潜艇，带你重回波澜壮阔的大海战！\r\n     《战舰猎手》由知名网络游戏运营商空中网代理，目前业务覆盖互联网游戏、手机游戏等领域。公司将继续寻求知名IP以及海外游戏的授权和代理，为中国玩家带来更多精品游戏。', 'developer': '上海大承网络技术有限公司', 'category': '游戏', 'updatetime': '2021-10-19', 'icon_url': 'https://p0.qhimg.com/t01ba75e355281dac9e.png', 'sceenshot_url': ['https://p0.qhimg.com/t01aae55938a7c383a1.jpg', 'https://p0.qhimg.com/t0199e6301e0f8943fe.jpg', 'https://p0.qhimg.com/t01118d03498e6e37d0.jpg', 'https://p0.qhimg.com/t01b5ec88aedb218801.jpg', 'https://p0.qhimg.com/t01dab6ad68ed470367.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3545519', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3545519>
+defaultdict(<class 'str'>, {'name': '战舰猎手', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/211019/8eb0ed8defe7d59ffd35fa1f9ebff4f5/com.kongzhong.c1.qh_55.apk?en=curpage%3D%26exp%3D1653014271%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409471%26tok%3D36524bd245599f622b839e3ea530e34e%26v%3D%26f%3Dz.apk', 'version': '1.19.10', 'introduce': '应用详情：     《战舰猎手》是一款二战题材3D海战射击手游，7V7的快节奏对战；加入F系10级金币巡洋舰-弗朗索瓦一世号礼包！与全新排位赛地图“马耳他”，属性更合理对战舰提升更大，各舰种相互配合，协同作战；拥有专业的转职晋升体系，个性化培养自己的舰员。更有触发式水兵技能，是关键时刻改变战局的力量；首推潜艇模式，真实水下视角，从海底出击还原史诗战役，基于经典海战战术演变而来， 300艘战列舰，巡洋舰，驱逐舰，航母，潜艇，带你重回波澜壮阔的大海战！\r\n     《战舰猎手》由知名网络游戏运营商空中网代理，目前业务覆盖互联网游戏、手机游戏等领域。公司将继续寻求知名IP以及海外游戏的授权和代理，为中国玩家带来更多精品游戏。', 'developer': '上海大承网络技术有限公司', 'category': '游戏', 'updatetime': '2021-10-19', 'icon_url': 'https://p0.qhimg.com/t01ba75e355281dac9e.png', 'sceenshot_url': ['https://p0.qhimg.com/t01aae55938a7c383a1.jpg', 'https://p0.qhimg.com/t0199e6301e0f8943fe.jpg', 'https://p0.qhimg.com/t01118d03498e6e37d0.jpg', 'https://p0.qhimg.com/t01b5ec88aedb218801.jpg', 'https://p0.qhimg.com/t01dab6ad68ed470367.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=3545519', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563120> (referer: http://m.app.so.com/category/cat_request?page=2&requestType=ajax&cid=4&csid=20&order=newest+)
+2022-05-13 10:38:38 [360] INFO: 数据：航天模拟器
+2022-05-13 10:38:38 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): app.eversaas.cn:443
+2022-05-13 10:38:38 [urllib3.connectionpool] DEBUG: https://app.eversaas.cn:443 "GET /service/app-ops/gaodeinfo?str=%E5%B9%BF%E5%B7%9E%E4%B8%87%E7%BB%B4%E5%9C%A8%E7%BA%BF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8 HTTP/1.1" 200 None
+2022-05-13 10:38:38 [eversec.pipelines] INFO: defaultdict(<class 'str'>, {'name': '航天模拟器', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220315/23b8e02380a9de331c1ec2a64db0d98b/com.mobbanana.htmnq_55.apk?en=curpage%3D%26exp%3D1653014253%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409453%26tok%3Da4b5f7093e34799dc33f79dc5238a9b0%26v%3D%26f%3Dz.apk', 'version': '1.7', 'introduce': '应用详情：航天模拟器\r\n这是一个关于用零件制造自己的火箭并发射它以探索太空的游戏！\r\n\r\n•实际缩放的行星，其大小可以达到数百到几千米，并且它们之间的距离为数百万公里。\r\n•现实的轨道力学\r\n•开放的宇宙，如果您在远处看到某些东西，则可以去那里，没有限制，没有看不见的墙壁。', 'developer': '广州万维在线科技有限公司', 'category': '游戏', 'updatetime': '2022-03-15', 'icon_url': 'https://p0.qhimg.com/t012f7a7b705a8d69ac.png', 'sceenshot_url': ['https://p0.qhimg.com/t010e61be5921fc0282.jpg', 'https://p0.qhimg.com/t01be43c7801fb8c891.jpg', 'https://p0.qhimg.com/t0165fae102cda58bf7.jpg', 'https://p0.qhimg.com/t0113dea3ebd5f7f850.jpg', 'https://p0.qhimg.com/t01671821d15d7df7c2.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563120', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563120>
+defaultdict(<class 'str'>, {'name': '航天模拟器', 'apksize': 0, 'downloadUrl': 'http://s.shouji.qihucdn.com/220315/23b8e02380a9de331c1ec2a64db0d98b/com.mobbanana.htmnq_55.apk?en=curpage%3D%26exp%3D1653014253%26from%3Dopenbox_mintf_getAppsByCategory%26m2%3D%26ts%3D1652409453%26tok%3Da4b5f7093e34799dc33f79dc5238a9b0%26v%3D%26f%3Dz.apk', 'version': '1.7', 'introduce': '应用详情：航天模拟器\r\n这是一个关于用零件制造自己的火箭并发射它以探索太空的游戏！\r\n\r\n•实际缩放的行星，其大小可以达到数百到几千米，并且它们之间的距离为数百万公里。\r\n•现实的轨道力学\r\n•开放的宇宙，如果您在远处看到某些东西，则可以去那里，没有限制，没有看不见的墙壁。', 'developer': '广州万维在线科技有限公司', 'category': '游戏', 'updatetime': '2022-03-15', 'icon_url': 'https://p0.qhimg.com/t012f7a7b705a8d69ac.png', 'sceenshot_url': ['https://p0.qhimg.com/t010e61be5921fc0282.jpg', 'https://p0.qhimg.com/t01be43c7801fb8c891.jpg', 'https://p0.qhimg.com/t0165fae102cda58bf7.jpg', 'https://p0.qhimg.com/t0113dea3ebd5f7f850.jpg', 'https://p0.qhimg.com/t01671821d15d7df7c2.jpg'], 'shop': '360手机助手', 'system': 'android', 'dlamount': None, 'url': 'http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4563120', 'jsonObject': {'time': '2022-05-13'}, 'province': '', 'city': '', 'source': 'pc'})
+2022-05-13 10:38:39 [scrapy.extensions.logstats] INFO: Crawled 49 pages (at 24 pages/min), scraped 12 items (at 12 items/min)
+2022-05-13 10:38:39 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-05-13 10:38:39 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2022-05-13 10:38:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://m.app.so.com/detail/index?pname=com.sincetimes.dragonfarmii.qihoo&id=4566647> (referer: http://m.app.so.com/category/cat_request?page=3&requestType=ajax&cid=4&csid=53&order=newest+)
+2022-05-13 10:38:40 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

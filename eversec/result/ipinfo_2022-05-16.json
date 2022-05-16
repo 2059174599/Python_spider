@@ -1,0 +1,137 @@
+{
+  "input": "171.251.25.38",
+  "data": {
+    "ip": "171.251.25.38",
+    "hostname": "dynamic-ip-adsl.viettel.vn",
+    "city": "Da Nang",
+    "region": "Da Nang",
+    "country": "VN",
+    "loc": "16.0678,108.2208",
+    "org": "AS7552 Viettel Group",
+    "postal": "50250",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "asn": {
+      "asn": "AS7552",
+      "name": "Viettel Group",
+      "domain": "viettel.com.vn",
+      "route": "171.251.24.0/21",
+      "type": "isp"
+    },
+    "company": {
+      "name": "Viettel Group",
+      "domain": "viettel.com.vn",
+      "type": "isp"
+    },
+    "privacy": {
+      "vpn": false,
+      "proxy": false,
+      "tor": false,
+      "relay": false,
+      "hosting": false,
+      "service": ""
+    },
+    "abuse": {
+      "address": "Ha Noi, VietNam",
+      "country": "VN",
+      "email": "hm-changed@vnnic.vn",
+      "name": "Tran Van Thanh",
+      "network": "171.224.0.0/11",
+      "phone": "+84-24-35564944"
+    },
+    "domains": {
+      "total": 0,
+      "domains": []
+    }
+  }
+}
+{
+  "input": "171.251.29.152",
+  "data": {
+    "ip": "171.251.29.152",
+    "hostname": "dynamic-ip-adsl.viettel.vn",
+    "city": "Da Nang",
+    "region": "Da Nang",
+    "country": "VN",
+    "loc": "16.0678,108.2208",
+    "org": "AS7552 Viettel Group",
+    "postal": "50250",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "asn": {
+      "asn": "AS7552",
+      "name": "Viettel Group",
+      "domain": "viettel.com.vn",
+      "route": "171.251.24.0/21",
+      "type": "isp"
+    },
+    "company": {
+      "name": "Viettel Group",
+      "domain": "viettel.com.vn",
+      "type": "isp"
+    },
+    "privacy": {
+      "vpn": false,
+      "proxy": false,
+      "tor": false,
+      "relay": false,
+      "hosting": false,
+      "service": ""
+    },
+    "abuse": {
+      "address": "Ha Noi, VietNam",
+      "country": "VN",
+      "email": "hm-changed@vnnic.vn",
+      "name": "Tran Van Thanh",
+      "network": "171.224.0.0/11",
+      "phone": "+84-24-35564944"
+    },
+    "domains": {
+      "total": 0,
+      "domains": []
+    }
+  }
+}
+{
+  "input": "179.43.142.180",
+  "data": {
+    "ip": "179.43.142.180",
+    "city": "Zürich",
+    "region": "Zurich",
+    "country": "CH",
+    "loc": "47.3667,8.5500",
+    "org": "AS51852 Private Layer INC",
+    "postal": "8000",
+    "timezone": "Europe/Zurich",
+    "asn": {
+      "asn": "AS51852",
+      "name": "Private Layer INC",
+      "domain": "phaselayer.com",
+      "route": "179.43.128.0/18",
+      "type": "hosting"
+    },
+    "company": {
+      "name": "PRIVATE LAYER INC",
+      "domain": "privatelayer.com",
+      "type": "hosting"
+    },
+    "privacy": {
+      "vpn": false,
+      "proxy": false,
+      "tor": false,
+      "relay": false,
+      "hosting": true,
+      "service": ""
+    },
+    "abuse": {
+      "address": "Edif. Ocean Business Plaza, 1404, Marbella, 00000 - Panama City -",
+      "country": "PA",
+      "email": "support@PRIVATELAYER.COM",
+      "name": "Milciades Garcia",
+      "network": "179.43.128.0/18",
+      "phone": "+41 43 5082295 []"
+    },
+    "domains": {
+      "total": 0,
+      "domains": []
+    }
+  }
+}

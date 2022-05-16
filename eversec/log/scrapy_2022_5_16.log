@@ -1,0 +1,681 @@
+2022-05-16 14:40:32 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 14:40:32 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 14:40:32 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 14:40:32 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 14:40:32 [scrapy.extensions.telnet] INFO: Telnet Password: 19b1c45a7e38d14b
+2022-05-16 14:40:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 14:40:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 14:40:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 14:40:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 14:40:34 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 14:40:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 14:40:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 14:40:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.onlinedown.net/new/android/0/> from <GET https://www.onlinedown.net/new/android/0>
+2022-05-16 14:40:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.onlinedown.net/new/android/1/> from <GET https://www.onlinedown.net/new/android/1>
+2022-05-16 14:40:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/new/android/0/> (referer: None)
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061109.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061108.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061107.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061106.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061105.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061104.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061101.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061100.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061098.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061096.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061095.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061094.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061092.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061091.htm
+2022-05-16 14:40:39 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061090.htm
+2022-05-16 14:40:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.onlinedown.net/new/android/> from <GET https://www.onlinedown.net/new/android/1/>
+2022-05-16 14:40:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061107.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:44 [huajun_pc] INFO: 数据：大众出行专车 安卓版 v2.2.0
+2022-05-16 14:40:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061108.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:45 [huajun_pc] INFO: 数据：超盟零售 安卓版 v1.5.3
+2022-05-16 14:40:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061109.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:48 [huajun_pc] INFO: 数据：松子优品 安卓版 v2.0.42
+2022-05-16 14:40:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061100.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:49 [huajun_pc] INFO: 数据：纪念日倒计时 安卓版 v2.0
+2022-05-16 14:40:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061101.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:52 [huajun_pc] INFO: 数据：联想扫地机 安卓版 v1.0.3
+2022-05-16 14:40:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061104.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:57 [huajun_pc] INFO: 数据：惠优卡加油 安卓版 v2.3.7
+2022-05-16 14:40:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061105.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:40:58 [huajun_pc] INFO: 数据：手机照片恢复管家 安卓版 v1.13.5
+2022-05-16 14:41:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061106.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:00 [huajun_pc] INFO: 数据：i淮安 安卓版 v1.0.0
+2022-05-16 14:41:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061094.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:01 [huajun_pc] INFO: 数据：第二回合 安卓版 v1.3.86
+2022-05-16 14:41:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061095.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:04 [huajun_pc] INFO: 数据：宝宝识汉字学拼音 安卓版 v4.71.21325
+2022-05-16 14:41:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061096.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:07 [huajun_pc] INFO: 数据：优农帮电子台账系统 安卓版 v84.0
+2022-05-16 14:41:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061098.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:09 [huajun_pc] INFO: 数据：智谱 安卓版 v1.3.8
+2022-05-16 14:41:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061090.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:10 [huajun_pc] INFO: 数据：飞猪旅行商家版 安卓版 v9.3.9
+2022-05-16 14:41:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061091.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:13 [huajun_pc] INFO: 数据：七色米ERP 安卓版 v2.4.1
+2022-05-16 14:41:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/soft/10061092.htm> (referer: https://www.onlinedown.net/new/android/0/)
+2022-05-16 14:41:16 [huajun_pc] INFO: 数据：清新天气预报 安卓版 v2.2
+2022-05-16 14:41:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.onlinedown.net/new/android/> (referer: None)
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061109.htm
+2022-05-16 14:41:18 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET https://www.onlinedown.net/soft/10061109.htm> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061108.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061107.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061106.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061105.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061104.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061101.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061100.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061098.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061096.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061095.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061094.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061092.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061091.htm
+2022-05-16 14:41:18 [huajun_pc] INFO: 详情页url：https://www.onlinedown.net/soft/10061090.htm
+2022-05-16 14:41:18 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 14:41:18 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 8487,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 1271809,
+ 'downloader/response_count': 20,
+ 'downloader/response_status_count/200': 17,
+ 'downloader/response_status_count/301': 3,
+ 'elapsed_time_seconds': 43.996321,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 6, 41, 18, 278916),
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 55,
+ 'request_depth_max': 1,
+ 'response_received_count': 17,
+ 'scheduler/dequeued/redis': 20,
+ 'scheduler/enqueued/redis': 20,
+ 'start_time': datetime.datetime(2022, 5, 16, 6, 40, 34, 282595)}
+2022-05-16 14:41:18 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 18:35:54 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 18:35:54 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 18:35:54 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 18:35:54 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 18:35:54 [scrapy.extensions.telnet] INFO: Telnet Password: 760381d9c85d10d7
+2022-05-16 18:35:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 18:35:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 18:35:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 18:35:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 18:35:55 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 18:35:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 18:35:55 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 18:35:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 18:36:00 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 18:36:00 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 342,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 22429,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 5.001554,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 10, 36, 0, 60296),
+ 'log_count/DEBUG': 1,
+ 'log_count/INFO': 10,
+ 'response_received_count': 1,
+ 'scheduler/dequeued/redis': 1,
+ 'scheduler/enqueued/redis': 1,
+ 'start_time': datetime.datetime(2022, 5, 16, 10, 35, 55, 58742)}
+2022-05-16 18:36:00 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 18:36:34 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 18:36:34 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 18:36:34 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 18:36:34 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 18:36:34 [scrapy.extensions.telnet] INFO: Telnet Password: cbf3e82a194dcca8
+2022-05-16 18:36:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 18:36:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 18:36:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 18:36:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 18:36:34 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 18:36:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 18:36:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 18:36:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 18:36:39 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 18:36:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 342,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 22429,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 5.273971,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 10, 36, 39, 888536),
+ 'log_count/DEBUG': 1,
+ 'log_count/INFO': 10,
+ 'response_received_count': 1,
+ 'scheduler/dequeued/redis': 1,
+ 'scheduler/enqueued/redis': 1,
+ 'start_time': datetime.datetime(2022, 5, 16, 10, 36, 34, 614565)}
+2022-05-16 18:36:39 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 18:39:29 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 18:39:29 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 18:39:29 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 18:39:29 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 18:39:29 [scrapy.extensions.telnet] INFO: Telnet Password: 6a4a94ec03888061
+2022-05-16 18:39:29 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 18:39:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 18:39:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 18:39:30 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 18:39:30 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 18:39:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 18:39:30 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 18:39:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 18:39:33 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://ipinfo.io/widget/demo/171.251.29.152> (referer: https://danger.rulez.sk/projects/bruteforceblocker/blist.php)
+2022-05-16 18:39:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://ipinfo.io/widget/demo/171.251.29.152>: HTTP status code is not handled or not allowed
+2022-05-16 18:39:35 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://ipinfo.io/widget/demo/171.251.25.38> (referer: https://danger.rulez.sk/projects/bruteforceblocker/blist.php)
+2022-05-16 18:39:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://ipinfo.io/widget/demo/171.251.25.38>: HTTP status code is not handled or not allowed
+2022-05-16 18:39:37 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://ipinfo.io/widget/demo/179.43.142.180> (referer: https://danger.rulez.sk/projects/bruteforceblocker/blist.php)
+2022-05-16 18:39:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://ipinfo.io/widget/demo/179.43.142.180>: HTTP status code is not handled or not allowed
+2022-05-16 18:39:37 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 18:39:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1532,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 23869,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 3,
+ 'elapsed_time_seconds': 7.25678,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 10, 39, 37, 273552),
+ 'httperror/response_ignored_count': 3,
+ 'httperror/response_ignored_status_count/404': 3,
+ 'log_count/DEBUG': 4,
+ 'log_count/INFO': 13,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'scheduler/dequeued/redis': 4,
+ 'scheduler/enqueued/redis': 4,
+ 'start_time': datetime.datetime(2022, 5, 16, 10, 39, 30, 16772)}
+2022-05-16 18:39:37 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 18:40:39 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 18:40:39 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 18:40:39 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 18:40:39 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 18:40:39 [scrapy.extensions.telnet] INFO: Telnet Password: f32460dd90a563d9
+2022-05-16 18:40:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 18:40:40 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 18:40:40 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 18:40:40 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 18:40:40 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 18:40:40 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 18:40:40 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 18:40:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 18:40:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/171.251.29.152> (referer: https://ipinfo.io/)
+2022-05-16 18:40:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/179.43.142.180> (referer: https://ipinfo.io/)
+2022-05-16 18:40:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/171.251.25.38> (referer: https://ipinfo.io/)
+2022-05-16 18:40:48 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 18:40:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1406,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 25288,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'elapsed_time_seconds': 7.774609,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 10, 40, 48, 111301),
+ 'httpcompression/response_bytes': 3085,
+ 'httpcompression/response_count': 3,
+ 'log_count/DEBUG': 4,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'scheduler/dequeued/redis': 4,
+ 'scheduler/enqueued/redis': 4,
+ 'start_time': datetime.datetime(2022, 5, 16, 10, 40, 40, 336692)}
+2022-05-16 18:40:48 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 19:13:49 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 19:13:49 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 19:13:49 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 19:13:49 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 19:13:49 [scrapy.extensions.telnet] INFO: Telnet Password: 4c405f4b53921097
+2022-05-16 19:13:49 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 19:13:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 19:13:50 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 19:13:50 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 19:13:50 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 19:13:50 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 19:13:50 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 19:13:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 19:13:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/171.251.29.152> (referer: https://ipinfo.io/)
+2022-05-16 19:13:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/171.251.25.38> (referer: https://ipinfo.io/)
+2022-05-16 19:13:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/179.43.142.180> (referer: https://ipinfo.io/)
+2022-05-16 19:13:58 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 19:13:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1406,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 25288,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'elapsed_time_seconds': 7.980736,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 11, 13, 58, 14568),
+ 'httpcompression/response_bytes': 3085,
+ 'httpcompression/response_count': 3,
+ 'log_count/DEBUG': 4,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'scheduler/dequeued/redis': 4,
+ 'scheduler/enqueued/redis': 4,
+ 'start_time': datetime.datetime(2022, 5, 16, 11, 13, 50, 33832)}
+2022-05-16 19:13:58 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 19:15:24 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 19:15:24 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 19:15:24 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 19:15:24 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 19:15:24 [scrapy.extensions.telnet] INFO: Telnet Password: a56013ced7b9699a
+2022-05-16 19:15:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 19:15:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 19:15:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 19:15:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 19:15:25 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 19:15:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 19:15:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 19:15:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 19:15:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/171.251.25.38> (referer: https://ipinfo.io/)
+2022-05-16 19:15:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/171.251.29.152> (referer: https://ipinfo.io/)
+2022-05-16 19:15:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ipinfo.io/widget/demo/179.43.142.180> (referer: https://ipinfo.io/)
+2022-05-16 19:15:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 19:15:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1406,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 25286,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'elapsed_time_seconds': 16.688026,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 11, 15, 41, 794801),
+ 'httpcompression/response_bytes': 3085,
+ 'httpcompression/response_count': 3,
+ 'log_count/DEBUG': 4,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'scheduler/dequeued/redis': 4,
+ 'scheduler/enqueued/redis': 4,
+ 'start_time': datetime.datetime(2022, 5, 16, 11, 15, 25, 106775)}
+2022-05-16 19:15:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 19:16:08 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 19:16:08 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 19:16:08 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 19:16:08 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 19:16:08 [scrapy.extensions.telnet] INFO: Telnet Password: ec733b65922aaf93
+2022-05-16 19:16:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 19:16:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 19:16:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 19:16:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 19:16:08 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 19:16:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 19:16:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 19:16:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 19:16:12 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.25.38> (failed 1 times): 429 Unknown Status
+2022-05-16 19:16:13 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.29.152> (failed 1 times): 429 Unknown Status
+2022-05-16 19:16:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/179.43.142.180> (failed 1 times): 429 Unknown Status
+2022-05-16 19:16:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.25.38> (failed 2 times): 429 Unknown Status
+2022-05-16 19:16:21 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.29.152> (failed 2 times): 429 Unknown Status
+2022-05-16 19:16:23 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/179.43.142.180> (failed 2 times): 429 Unknown Status
+2022-05-16 19:16:25 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://ipinfo.io/widget/demo/171.251.25.38> (failed 3 times): 429 Unknown Status
+2022-05-16 19:16:25 [scrapy.core.engine] DEBUG: Crawled (429) <GET https://ipinfo.io/widget/demo/171.251.25.38> (referer: https://ipinfo.io/)
+2022-05-16 19:16:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <429 https://ipinfo.io/widget/demo/171.251.25.38>: HTTP status code is not handled or not allowed
+2022-05-16 19:16:29 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://ipinfo.io/widget/demo/171.251.29.152> (failed 3 times): 429 Unknown Status
+2022-05-16 19:16:29 [scrapy.core.engine] DEBUG: Crawled (429) <GET https://ipinfo.io/widget/demo/171.251.29.152> (referer: https://ipinfo.io/)
+2022-05-16 19:16:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <429 https://ipinfo.io/widget/demo/171.251.29.152>: HTTP status code is not handled or not allowed
+2022-05-16 19:16:31 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://ipinfo.io/widget/demo/179.43.142.180> (failed 3 times): 429 Unknown Status
+2022-05-16 19:16:31 [scrapy.core.engine] DEBUG: Crawled (429) <GET https://ipinfo.io/widget/demo/179.43.142.180> (referer: https://ipinfo.io/)
+2022-05-16 19:16:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <429 https://ipinfo.io/widget/demo/179.43.142.180>: HTTP status code is not handled or not allowed
+2022-05-16 19:16:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 19:16:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3534,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 26749,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/429': 9,
+ 'elapsed_time_seconds': 22.985201,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 11, 16, 31, 813013),
+ 'httperror/response_ignored_count': 3,
+ 'httperror/response_ignored_status_count/429': 3,
+ 'log_count/DEBUG': 10,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 13,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'retry/count': 6,
+ 'retry/max_reached': 3,
+ 'retry/reason_count/429 Unknown Status': 6,
+ 'scheduler/dequeued/redis': 10,
+ 'scheduler/enqueued/redis': 10,
+ 'start_time': datetime.datetime(2022, 5, 16, 11, 16, 8, 827812)}
+2022-05-16 19:16:31 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-05-16 19:28:04 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: eversec)
+2022-05-16 19:28:04 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2022-05-16 19:28:04 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-16 19:28:04 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'eversec',
+ 'DOWNLOAD_DELAY': 2,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_FILE': 'E:\\gitlab\\crawler-web\\eversec\\eversec\\log\\scrapy_2022_5_16.log',
+ 'NEWSPIDER_MODULE': 'eversec.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['eversec.spiders']}
+2022-05-16 19:28:04 [scrapy.extensions.telnet] INFO: Telnet Password: e27b7149cac89838
+2022-05-16 19:28:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-05-16 19:28:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['eversec.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-16 19:28:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-16 19:28:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['eversec.pipelines.EversecPipeline']
+2022-05-16 19:28:04 [scrapy.core.engine] INFO: Spider opened
+2022-05-16 19:28:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-16 19:28:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-16 19:28:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://danger.rulez.sk/projects/bruteforceblocker/blist.php> (referer: None)
+2022-05-16 19:28:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.29.152> (failed 1 times): 429 Unknown Status
+2022-05-16 19:28:09 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/179.43.142.180> (failed 1 times): 429 Unknown Status
+2022-05-16 19:28:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.25.38> (failed 1 times): 429 Unknown Status
+2022-05-16 19:28:14 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.29.152> (failed 2 times): 429 Unknown Status
+2022-05-16 19:28:16 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/179.43.142.180> (failed 2 times): 429 Unknown Status
+2022-05-16 19:28:17 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ipinfo.io/widget/demo/171.251.25.38> (failed 2 times): 429 Unknown Status
+2022-05-16 19:28:19 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://ipinfo.io/widget/demo/171.251.29.152> (failed 3 times): 429 Unknown Status
+2022-05-16 19:28:19 [scrapy.core.engine] DEBUG: Crawled (429) <GET https://ipinfo.io/widget/demo/171.251.29.152> (referer: https://ipinfo.io/)
+2022-05-16 19:28:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <429 https://ipinfo.io/widget/demo/171.251.29.152>: HTTP status code is not handled or not allowed
+2022-05-16 19:28:21 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://ipinfo.io/widget/demo/179.43.142.180> (failed 3 times): 429 Unknown Status
+2022-05-16 19:28:21 [scrapy.core.engine] DEBUG: Crawled (429) <GET https://ipinfo.io/widget/demo/179.43.142.180> (referer: https://ipinfo.io/)
+2022-05-16 19:28:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <429 https://ipinfo.io/widget/demo/179.43.142.180>: HTTP status code is not handled or not allowed
+2022-05-16 19:28:24 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://ipinfo.io/widget/demo/171.251.25.38> (failed 3 times): 429 Unknown Status
+2022-05-16 19:28:24 [scrapy.core.engine] DEBUG: Crawled (429) <GET https://ipinfo.io/widget/demo/171.251.25.38> (referer: https://ipinfo.io/)
+2022-05-16 19:28:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <429 https://ipinfo.io/widget/demo/171.251.25.38>: HTTP status code is not handled or not allowed
+2022-05-16 19:28:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-05-16 19:28:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3534,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 26753,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/429': 9,
+ 'elapsed_time_seconds': 19.944896,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 16, 11, 28, 24, 579036),
+ 'httperror/response_ignored_count': 3,
+ 'httperror/response_ignored_status_count/429': 3,
+ 'log_count/DEBUG': 10,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 13,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'retry/count': 6,
+ 'retry/max_reached': 3,
+ 'retry/reason_count/429 Unknown Status': 6,
+ 'scheduler/dequeued/redis': 10,
+ 'scheduler/enqueued/redis': 10,
+ 'start_time': datetime.datetime(2022, 5, 16, 11, 28, 4, 634140)}
+2022-05-16 19:28:24 [scrapy.core.engine] INFO: Spider closed (finished)
