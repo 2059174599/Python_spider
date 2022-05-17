@@ -6,6 +6,7 @@ import time
 import logging
 import logging.handlers
 import requests
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +31,8 @@ class AnktySpider(scrapy.Spider):
         self.page = None
         self.html_url = 'https://www.hybrid-analysis.com{}'
         self.down_url = 'https://www.xuanbiaoqing.com/api/show_download_url/{}'
+        self.name = os.path.basename(__file__).split(".")[0] + '_' + str(
+            time.strftime("%Y-%m-%d", time.localtime())) + '.json'
 
     def start_requests(self):
         for url in self.start_urls:
@@ -103,4 +106,4 @@ class AnktySpider(scrapy.Spider):
             item['Environment'] = line.xpath('./td[7]/span/text()').get().strip()
             item['SpiderTime'] = time.strftime("%Y-%m-%d", time.localtime())
             item['Url'] = response.url
-            self.saveResult('../log/result_hybrid.json', json.dumps(item, ensure_ascii=False))
+            self.saveResult('../result/{}'.format(self.name), json.dumps(item, ensure_ascii=False))
