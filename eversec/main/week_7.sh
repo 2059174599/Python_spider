@@ -1,3 +1,3 @@
-source /home/crawl_backend_interface/bin/activate
+source /home/crawl_downloader/bin/activate
 cd /home/eversec/eversec/spiders
 scrapy runspider zhangkewang.py
